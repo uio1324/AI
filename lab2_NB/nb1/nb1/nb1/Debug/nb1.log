@@ -1,0 +1,31 @@
+﻿  源.cpp
+e:\ai\nb\nb1\nb1\nb1\源.cpp(38): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(40): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(53): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(56): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(83): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(85): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(99): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(106): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(109): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(138): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(173): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(202): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(209): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(230): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(234): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(194): warning C4101: “k”: 未引用的局部变量
+e:\ai\nb\nb1\nb1\nb1\源.cpp(261): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(279): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(282): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(306): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(333): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(401): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(404): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(415): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(390): warning C4101: “k”: 未引用的局部变量
+e:\ai\nb\nb1\nb1\nb1\源.cpp(441): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(460): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(463): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\nb\nb1\nb1\nb1\源.cpp(448): warning C4101: “p2”: 未引用的局部变量
+  nb1.vcxproj -> E:\AI\NB\nb1\nb1\Debug\nb1.exe

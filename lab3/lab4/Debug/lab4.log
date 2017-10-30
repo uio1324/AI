@@ -1,0 +1,28 @@
+﻿  源.cpp
+e:\ai\lab4\lab4\源.cpp(22): warning C4091: “typedef ”: 没有声明变量时忽略“TrainSet”的左侧
+e:\ai\lab4\lab4\源.cpp(49): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(105): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(135): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(138): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(145): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(157): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(172): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(182): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(185): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(192): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(200): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(211): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(214): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(225): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(228): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(245): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(272): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(281): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(284): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(291): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(300): warning C4018: “<”: 有符号/无符号不匹配
+e:\ai\lab4\lab4\源.cpp(303): warning C4018: “<”: 有符号/无符号不匹配
+  lab4.vcxproj -> E:\AI\lab4\Debug\lab4.exe

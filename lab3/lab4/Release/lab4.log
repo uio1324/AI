@@ -1,0 +1,34 @@
+﻿  源.cpp
+源.cpp(22): warning C4091: “typedef ”: 没有声明变量时忽略“TrainSet”的左侧
+源.cpp(49): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(105): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(135): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(138): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(145): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(157): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(172): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(182): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(185): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(192): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(200): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(211): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(214): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(225): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(228): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(245): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(273): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(283): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(286): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(293): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(301): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(311): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(314): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  3 of 313 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    20 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  lab4.vcxproj -> E:\AI\lab4\Release\lab4.exe
