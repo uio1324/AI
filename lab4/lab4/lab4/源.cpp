@@ -84,6 +84,31 @@ void FileCheck(int modeChoose)
 			//至此结束单个训练数据x处理
 		}
 	}
+	else if (modeChoose == 1)
+	{
+		fstream test("test.csv");
+		while (getline(test, s))
+		{
+			vector <double> nums;
+			TrainSet singleTrain;
+			char *str = (char *)s.c_str();//string --> char
+			const char *split = ",";
+			char *p = strtok(str, split);//逗号分隔依次取出
+			double a;
+			while (p != NULL)
+			{
+				sscanf(p, "%lf", &a);//char ---> double
+				nums.push_back(a);
+				p = strtok(NULL, split);
+			}
+			for (i = 0; i < nums.size() - 1; i++)
+			{
+				singleTrain.data.push_back(nums[i]);
+			}
+			testSet.push_back(singleTrain);
+			//至此结束单个测试数据x处理
+		}
+	}
 
 
 }
@@ -180,6 +205,120 @@ double ID3(vector <TrainSet> data, vector <double> usedAttr)
 
 }
 
+double C45(vector <TrainSet> data, vector <double> usedAttr)
+{
+	int i, i0, j, k; double tmp = 0, H_tmp = 0, min_result = 1, max_result = 0, final_result = 0;
+	for (i = 0; i < data.size(); i++)
+		if (data[i].label == 1) tmp++;
+	//计算经验熵
+	double HD = -1.0*tmp / data.size()*log2(tmp / data.size()) - (data.size() - tmp) / data.size()*log2((data.size() - tmp) / data.size());
+	double SpiltInfo;
+	map <double, double> num_attr, num_label;
+	vector <double> result;
+	for (i = 0; i < data[0].data.size(); i++)//对于每一维度
+	{
+		//跳过需要跳过的维度
+		if (find(usedAttr.begin(), usedAttr.end(), i) != usedAttr.end())
+		{
+			result.push_back(-1);//用于填充被跳过的维度
+			continue;
+
+		}
+		num_attr.clear();
+		for (j = 0; j < data.size(); j++)
+		{
+			num_attr[data[j].data[i]]++;
+		}
+		H_tmp = 0; SpiltInfo = 0;
+		for (map <double, double>::iterator it = num_attr.begin(); it != num_attr.end(); it++)
+		{
+			num_label.clear();
+			for (j = 0; j < data.size(); j++)
+			{
+				if (it->first == data[j].data[i])
+				{
+					num_label[data[j].label]++;
+				}
+			}
+			for (map <double, double>::iterator it1 = num_label.begin(); it1 != num_label.end(); it1++)
+			{
+				H_tmp += (it->second / data.size())*(-1.0*it1->second / it->second) * log2((1.0*it1->second / it->second));
+			}
+			SpiltInfo += -1.0*(it->second / data.size())*log2(it->second / data.size());//计算每个特征的熵
+		}
+		//得到一整个维度的信息增益率，即gainRatio( , )
+		result.push_back((HD - H_tmp)/ SpiltInfo);
+	}
+	//得到所有维度的信息增益率，选择最大的特征作为决策点
+	for (i = 0; i < result.size(); i++)
+	{
+		//cout << i << " " << result[i] << endl;
+		if (result[i] > max_result && result[i] > 0)
+		{
+			max_result = result[i];
+			final_result = i;
+		}
+	}
+	return final_result;
+}
+
+double CART(vector <TrainSet> data, vector <double> usedAttr)
+{
+	int i, i0, j, k; double tmp = 0, gini = 0, min_result = 1, final_result = 0;
+	for (i = 0; i < data.size(); i++)
+		if (data[i].label == 1) tmp++;
+	map <double, double> num_attr, num_label;
+	vector <double> result;
+	for (i = 0; i < data[0].data.size(); i++)//对于每一维度
+	{
+		//跳过需要跳过的维度
+		if (find(usedAttr.begin(), usedAttr.end(), i) != usedAttr.end())
+		{
+			result.push_back(-1);//用于填充被跳过的维度
+			continue;
+
+		}
+		num_attr.clear();
+		for (j = 0; j < data.size(); j++)
+		{
+			num_attr[data[j].data[i]]++;
+		}
+		gini = 0;
+		for (map <double, double>::iterator it = num_attr.begin(); it != num_attr.end(); it++)
+		{
+			num_label.clear();
+			for (j = 0; j < data.size(); j++)
+			{
+				if (it->first == data[j].data[i])
+				{
+					num_label[data[j].label]++;
+				}
+			}
+			for (map <double, double>::iterator it1 = num_label.begin(); it1 != num_label.end(); it1++)
+			{
+				gini += (it->second / data.size())*(-1.0*it1->second / it->second) * (1.0*it1->second / it->second);//ID3的log改成平方
+			}
+			gini += (it->second / data.size());//公式里还有一个1需要加上去
+		}
+		//得到一整个维度的gini系数
+		result.push_back(gini);
+	}
+	//得到所有维度的gini系数，选择系数最小的特征作为决策点
+	for (i = 0; i < result.size(); i++)
+	{
+		//cout << i << " " << result[i] << endl;
+		if (result[i] < min_result && result[i] > 0)
+		{
+			min_result = result[i];
+			final_result = i;
+		}
+	}
+	return final_result;
+
+}
+
+
+
 vector <double> Attr;
 
 node * create_tree(vector <TrainSet> data, vector <double> usedAttr) 
@@ -209,7 +348,9 @@ node * create_tree(vector <TrainSet> data, vector <double> usedAttr)
 		return temp_node;
 	}
 
-	double a = ID3(data, usedAttr);
+	//double a = ID3(data, usedAttr);
+	double a = C45(data, usedAttr);
+	//double a = CART(data, usedAttr);
 	usedAttr.push_back(a);
 	root->attribute = a;
 	set <double> tempset;
@@ -290,14 +431,24 @@ void ShowAccuracy()
 	cout << count / (double)valSet.size() << endl;
 }
 
+void OutputTest()
+{
+	ofstream testResult("15352048_chenxiao.txt");
+	for (int i = 0; i < testSet.size(); i++)
+	{
+		testResult << getLabel(testSet[i], final_root) << endl;
+	}
+	testResult.close();
+}
 
 
 int main()
 {
-	FileCheck(0);
+	FileCheck(1);
 	//cout << "my label choose: " << ID3() << endl;
 	final_root = create_tree(trainSet, Attr);
-	ShowAccuracy();
+	//ShowAccuracy();
+	OutputTest();
 	system("pause");
 	return 0;
 }

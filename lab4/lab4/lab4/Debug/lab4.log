@@ -2,26 +2,42 @@
 g:\ai\lab4\lab4\lab4\源.cpp(19): warning C4091: “typedef ”: 没有声明变量时忽略“TrainSet”的左侧
 g:\ai\lab4\lab4\lab4\源.cpp(52): warning C4018: “<”: 有符号/无符号不匹配
 g:\ai\lab4\lab4\lab4\源.cpp(78): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(96): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(98): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
-g:\ai\lab4\lab4\lab4\源.cpp(102): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(104): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
-g:\ai\lab4\lab4\lab4\源.cpp(118): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(129): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(135): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(145): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(153): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(104): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(121): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(123): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+g:\ai\lab4\lab4\lab4\源.cpp(127): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(129): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+g:\ai\lab4\lab4\lab4\源.cpp(143): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(160): warning C4018: “<”: 有符号/无符号不匹配
 g:\ai\lab4\lab4\lab4\源.cpp(170): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(128): warning C4101: “k”: 未引用的局部变量
-g:\ai\lab4\lab4\lab4\源.cpp(128): warning C4101: “i0”: 未引用的局部变量
-g:\ai\lab4\lab4\lab4\源.cpp(191): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(217): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(220): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
-g:\ai\lab4\lab4\lab4\源.cpp(225): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(227): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
-g:\ai\lab4\lab4\lab4\源.cpp(189): warning C4101: “k”: 未引用的局部变量
-g:\ai\lab4\lab4\lab4\源.cpp(258): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
-g:\ai\lab4\lab4\lab4\源.cpp(260): warning C4018: “<”: 有符号/无符号不匹配
-g:\ai\lab4\lab4\lab4\源.cpp(253): warning C4101: “j”: 未引用的局部变量
-g:\ai\lab4\lab4\lab4\源.cpp(283): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(178): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(195): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(153): warning C4101: “k”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(153): warning C4101: “i0”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(211): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(218): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(228): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(236): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(253): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(210): warning C4101: “k”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(210): warning C4101: “i0”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(268): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(272): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(282): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(290): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(307): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(267): warning C4101: “k”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(267): warning C4101: “i0”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(330): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(358): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(361): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+g:\ai\lab4\lab4\lab4\源.cpp(366): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(368): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+g:\ai\lab4\lab4\lab4\源.cpp(328): warning C4101: “k”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(399): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+g:\ai\lab4\lab4\lab4\源.cpp(401): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(394): warning C4101: “j”: 未引用的局部变量
+g:\ai\lab4\lab4\lab4\源.cpp(424): warning C4018: “<”: 有符号/无符号不匹配
+g:\ai\lab4\lab4\lab4\源.cpp(437): warning C4018: “<”: 有符号/无符号不匹配
   lab4.vcxproj -> G:\AI\lab4\lab4\Debug\lab4.exe
