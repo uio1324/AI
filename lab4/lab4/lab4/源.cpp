@@ -373,6 +373,7 @@ node * create_tree(vector <TrainSet> data, vector <double> usedAttr)
 		//获得当前属性a下的某一个子数据集
 		if (tempTrainSet.empty())
 		{
+			//边界条件3：当前tempTrainSet是空集
 			node * temp_node = new node;
 			temp_node->arrived_value = get_most_value(data);
 			temp_node->isLeaf = 1;//是叶子节点了
@@ -444,7 +445,7 @@ void OutputTest()
 
 int main()
 {
-	FileCheck(1);
+	FileCheck(1);//传入0进行验证集的计算，传入1进行测试集的计算
 	//cout << "my label choose: " << ID3() << endl;
 	final_root = create_tree(trainSet, Attr);
 	//ShowAccuracy();
