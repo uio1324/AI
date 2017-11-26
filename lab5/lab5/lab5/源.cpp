@@ -22,8 +22,8 @@ typedef struct TrainSet {
 };
 
 vector <TrainSet> trainSet, valSet, testSet;
+vector <double> w;
 
-double checktrainSet(vector <double> w);
 
 void FileCheck(int modeChoose)
 {
@@ -130,11 +130,12 @@ void LR(vector <TrainSet> v)
 	for (i = 0; i < trainSet[0].num.size(); i++)
 	{
 		//全部初始化w为1
+		w.push_back(1);
 		w0.push_back(1);
 	}
-	//设置总体迭代次数，学习步长n
+	//设置总体迭代次数i0，学习步长n
 	double n = 0.7;
-	for (i0 = 0; i0 < 10; i0++)
+	for (i0 = 0; i0 < 1000; i0++)
 	{
 		//遍历所有训练数据,计算每个样例的权重分数，存入w_tmp
 		w_tmp.clear();
@@ -150,7 +151,7 @@ void LR(vector <TrainSet> v)
 		//得到所有样例的权重分数
 		//每一维的梯度计算
 		cost.clear();
-		for (i = 0; i < trainSet[i].num.size(); i++)
+		for (i = 0; i < trainSet[0].num.size(); i++)
 		{
 			c = 0;
 			for (j = 0; j < trainSet.size(); j++)
@@ -158,11 +159,13 @@ void LR(vector <TrainSet> v)
 				c += (1 / (1 + exp(-1.0*w_tmp[j])) - trainSet[j].label) * trainSet[j].num[i];//每一维的梯度计算
 			}
 			cost.push_back(c);
+			//cout << "ΔCost " << i << ": " << c << endl;
 		}
 		//更新每一维的权重
 		for (i = 0; i < w0.size(); i++)
 		{
-			w0[i] -= pow(n, i0) * cost[i];
+			w[i] = w0[i] -= (pow(n, i0) + 0.0001) * cost[i];
+			//cout << "w" << i << ": " << w0[i] << endl;
 		}
 	}
 	//结束预测，得到最终的w值
@@ -207,58 +210,18 @@ void ShowAccuracy(vector <TrainSet> v)
 
 void OutputTest()
 {
-	ofstream testResult("15352048_chenxiao_PLA.csv");
-	//初始化权重向量w0 = 0
-	vector <double> w0;
-	vector <double> w1;
-	int i, i0, j;
-	double signW;
-	for (i = 0; i < trainSet[0].num.size(); i++)
-	{
-		//全部初始化w为1
-		w0.push_back(1);
-		w1.push_back(1);
-	}
-	//设置总体迭代次数
-	for (i0 = 0; i0 < 50; i0++)
-	{
-		//遍历所有训练数据
-		for (i = 0; i < trainSet.size(); i++)
-		{
-			signW = 0;
-			for (j = 0; j < trainSet[i].num.size(); j++)
-			{
-				signW += trainSet[i].num[j] * w0[j];
-			}
-			//若预测不正确，则更新w的值
-			if (sign(signW) != trainSet[i].label)
-			{
-				for (j = 0; j < w0.size(); j++)
-				{
-					w0[j] = w0[j] + trainSet[i].label * trainSet[i].num[j];
-				}
-				//由于已经更新w的值，需要判断w的错误率是否小于全局最优
-				double c1 = checktrainSet(w0), c2 = checktrainSet(w1);
-				if (c1 > c2)
-				{
-					for (j = 0; j < w1.size(); j++)
-					{
-						w1[j] = w0[j];
-					}
-				}
-			}
-		}
-	}
-	//结束预测，得到最终的w值
+	ofstream testResult("15352048_chenxiao.txt");
 	//循环计算所有的label和标准值的差距。
+	int i, j;
 	for (i = 0; i < testSet.size(); i++)
 	{
-		signW = 0;
-		for (j = 0; j < w1.size(); j++)
+		double zhishu = 0, p = 0;
+		for (j = 0; j < w.size(); j++)
 		{
-			signW += testSet[i].num[j] * w1[j];
+			zhishu += testSet[i].num[j] * w[j];
 		}
-		testSet[i].label = sign(signW);
+		p = (1 / (1 + exp(-1.0* zhishu)));
+		testSet[i].label = sign(p);
 		testResult << testSet[i].label << endl;
 	}
 }

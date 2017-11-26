@@ -1,0 +1,22 @@
+﻿  源.cpp
+源.cpp(22): warning C4091: “typedef ”: 没有声明变量时忽略“TrainSet”的左侧
+源.cpp(49): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(105): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(130): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(142): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(145): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(157): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(165): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(174): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(177): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(191): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(216): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(219): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  1 of 316 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  lab5.vcxproj -> G:\AI\lab5\lab5\Release\lab5.exe
