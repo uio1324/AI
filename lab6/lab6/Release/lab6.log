@@ -1,0 +1,46 @@
+﻿  源.cpp
+源.cpp(17): warning C4091: “typedef ”: 没有声明变量时忽略“TrainSet”的左侧
+源.cpp(25): warning C4091: “typedef ”: 没有声明变量时忽略“Node”的左侧
+源.cpp(52): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(84): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(111): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(45): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(48): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2261): note: 参见“sscanf”的声明
+源.cpp(50): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(77): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(80): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2261): note: 参见“sscanf”的声明
+源.cpp(82): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(103): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(106): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2261): note: 参见“sscanf”的声明
+源.cpp(108): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(439): note: 参见“strtok”的声明
+源.cpp(38): warning C4101: “j”: 未引用的局部变量
+源.cpp(129): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(156): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(152): warning C4101: “i”: 未引用的局部变量
+源.cpp(167): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(165): warning C4101: “k”: 未引用的局部变量
+源.cpp(165): warning C4101: “j”: 未引用的局部变量
+源.cpp(180): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(184): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(188): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(189): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(175): warning C4101: “k”: 未引用的局部变量
+源.cpp(200): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(217): warning C4018: “<”: 有符号/无符号不匹配
+源.cpp(251): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  4 of 366 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    14 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  lab6.vcxproj -> G:\AI\lab6\Release\lab6.exe
