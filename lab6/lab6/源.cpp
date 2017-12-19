@@ -28,7 +28,7 @@ typedef struct Node {
 vector <TrainSet> trainSet, valSet, testSet;
 vector <Node> i2h_weight;
 Node hidden, out;
-vector <double> w;
+vector <double> w, minibatch;
 
 
 void FileCheck(int modeChoose)
@@ -123,7 +123,7 @@ void FileCheck(int modeChoose)
 void initialize_weight() {
 	int i, j;
 	//初始化输入到隐藏层
-	int node_number = 50;
+	int node_number = 20;
 	for (i = 0; i < node_number; i++) {
 		Node tempNode;
 		for (j = 0; j < trainSet[0].num.size(); j++) {
@@ -180,6 +180,7 @@ void backward_pass(TrainSet t) {
 	for (i = 0; i < hidden.num.size(); i++) {
 		hidden.error[i] = hidden.num[i] * (1 - hidden.num[i]) * hidden.weight[i] * output_error;
 	}
+	//在不使用minibatch的情况下使用以下代码，每一条训练数据就更新一次权重向量
 	//更新权重向量
 	for (i = 0; i < hidden.weight.size(); i++) {
 		hidden.weight[i] = hidden.weight[i] + n * output_error * hidden.num[i];
@@ -230,30 +231,30 @@ int main()
 		//	printf("id: %d, E = %lf\n", id, E / trainSet.size());
 		//	for_matlab << E / trainSet.size() << ",";
 		//}
-		//if (i % 10 == 0) {
-		//	id++;
-		//	double O_average = 0, E = 0;
-		//	for (int k = 0; k < valSet.size(); k++) {//对于每一个训练数据，算一次权重更新的迭代
-		//		forward_pass_i2h(valSet[k]);//前向传递
-		//		forward_pass_h2o();//前向传递
-		//		E += 0.5 * pow((valSet[k].num[valSet[k].num.size() - 1] - hidden.output), 2);
-		//	}
-		//	printf("id: %d, E = %lf\n", id, E / valSet.size());
-		//	for_matlab << E / valSet.size() << ",";
-		//}
+		if (i % 10 == 0) {
+			id++;
+			double O_average = 0, E = 0;
+			for (int k = 0; k < valSet.size(); k++) {//对于每一个训练数据，算一次权重更新的迭代
+				forward_pass_i2h(valSet[k]);//前向传递
+				forward_pass_h2o();//前向传递
+				E += 0.5 * pow((valSet[k].num[valSet[k].num.size() - 1] - hidden.output), 2);
+			}
+			printf("id: %d, E = %lf\n", id, E / valSet.size());
+			for_matlab << E / valSet.size() << ",";
+		}
 		
 	
 		
 	}
-	//OutputTest();
-	ofstream for_matlab_standard("for_matlab_standard.txt");
-	double E = 0;
-	for (int i = 0; i < valSet.size(); i++) {
-		forward_pass_i2h(valSet[i]);//前向传递
-		forward_pass_h2o();//前向传递
-		for_matlab << hidden.output << ",";
-		for_matlab_standard << valSet[i].num[valSet[i].num.size() - 1] << ",";
-	}
+	OutputTest();
+	//ofstream for_matlab_standard("for_matlab_standard.txt");
+	//double E = 0;
+	//for (int i = 0; i < valSet.size(); i++) {
+	//	forward_pass_i2h(valSet[i]);//前向传递
+	//	forward_pass_h2o();//前向传递
+	//	for_matlab << hidden.output << ",";
+	//	for_matlab_standard << valSet[i].num[valSet[i].num.size() - 1] << ",";
+	//}
 	
 
 
